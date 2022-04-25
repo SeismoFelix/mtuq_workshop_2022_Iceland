@@ -34,8 +34,7 @@ Add these lines to event_input_mtuq2022.py for dowloading the supplementary mate
         # Network and Channel requests CHANGE THIS vvvvvvvv
         ev_info.network = 'Z7'
         ev_info.channel = 'HH?'
-        ev_info.station = '*'
-        #ev_info.station = 'RODG,DYSA,LIND,LOKT,LAUF,KALF,HELI,FAG,SVIN,K250' #Receive all stations except CI.SWS (if not needed just delete)
+        ev_info.station = 'MOFO,DYFE,VADA,KLUR,RIFR,ASK,DREK,LOKT,VIFE,SVAD,BRU,HRUR,BOTN,BRUN,UTYR,MIDF,FLAT,SKAF,HETO,MYVO,TOLI,LAUF,HALI,KOLL,HELI,KODA,ARNA,FAG,SVIN,K250'
         # ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
         
         # Event specific information CHANGE THIS vvvvvvvvvvvv
@@ -73,7 +72,7 @@ Add these lines to event_input_mtuq2022.py for dowloading the supplementary mate
         ev_info.network = 'Z7'
         ev_info.channel = 'HH?'
         ev_info.station = '*'
-        #ev_info.station = 'RODG,DYSA,LIND,LOKT,LAUF,KALF,HELI,FAG,SVIN,K250' #Receive all stations except CI.SWS (if not needed just delete)
+        ev_info.station = 'MOFO,DYFE,VADA,KLUR,RIFR,ASK,DREK,LOKT,VIFE,SVAD,BRU,HRUR,BOTN,BRUN,UTYR,MIDF,FLAT,SKAF,HETO,MYVO,TOLI,LAUF,HALI,KOLL,HELI,KODA,ARNA,FAG,SVIN,K250' 
         # ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
         
         # Event specific information CHANGE THIS vvvvvvvvvvvv
@@ -88,5 +87,3 @@ Add these lines to event_input_mtuq2022.py for dowloading the supplementary mate
         ev_info.resample_freq = 50
         # See iex == 1 for more info
         ev_info.scale_factor = 100
-
-
