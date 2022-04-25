@@ -24,8 +24,8 @@ if __name__=='__main__':
     #   
 
 
-    path_data=    fullpath('data/examples/20140828081339000/*.[zrt]')
-    path_weights= fullpath('data/examples/20140828081339000/weights.dat')
+    path_data=    fullpath('/home/jovyan/scoped/pysep/20140828081339000/*.[zrt]')
+    path_weights= fullpath('/home/jovyan/scoped/pysep/20140828081339000/weights.dat')
     event_id=     '20140828081339000'
     model=        'ak135'
 
@@ -90,7 +90,7 @@ if __name__=='__main__':
     #
 
     grid = FullMomentTensorGridSemiregular(
-        npts_per_axis=10,
+        npts_per_axis=15,
         magnitudes=[5.1,5.2,5.3,5.4,5.5])
 
     wavelet = Trapezoid(
