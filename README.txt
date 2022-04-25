@@ -1,4 +1,4 @@
-Supplementary events workshop MTUQ 2022
+Supplementary events workshop MTUQ 2022: https://github.com/thurinj/mtuq_workshop_2022
 SA: 20140828081339000 : Caldera Collapse  Mw. 5.3 event
 SB: 20140826115645000 : Strike-slip Mw. 4.2 event triggered by dike propagation 
 GridSearch.DoubleCouple_SA.py: Double couple test SA event
