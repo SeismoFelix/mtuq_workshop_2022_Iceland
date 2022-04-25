@@ -32,8 +32,8 @@ if __name__=='__main__':
     # from a regional seismic array
     #
 
-    path_data=    fullpath('data/examples/20140826115645000/*.[zrt]')
-    path_weights= fullpath('data/examples/20140826115645000/weights.dat')
+    path_data=    fullpath('/home/jovyan/scoped/pysep/20140826115645000/*.[zrt]')
+    path_weights= fullpath('/home/jovyan/scoped/pysep/20140826115645000/weights.dat')
     event_id=     '20140826115645000'
     model=        'ak135'
 
