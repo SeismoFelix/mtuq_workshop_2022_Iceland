@@ -14,21 +14,18 @@ from mtuq.util import fullpath, merge_dicts, save_json
 from mtuq.util.cap import parse_station_codes, Trapezoid
 
 
-
 if __name__=='__main__':
     #
     # Carries out grid search over all moment tensor parameters
     #
     # USAGE
     #   mpirun -n <NPROC> python GridSearch.FullMomentTensor.py
-    #   
-
+    #
 
     path_data=    fullpath('/home/jovyan/scoped/pysep/20140826115645000/*.[zrt]')
     path_weights= fullpath('/home/jovyan/scoped/pysep/20140826115645000/weights.dat')
     event_id=     '20140826115645000'
     model=        'ak135'
-
 
     #
     # Body and surface wave measurements will be made separately
@@ -48,14 +45,13 @@ if __name__=='__main__':
     process_sw = ProcessData(
         filter_type='Bandpass',
         freq_min=0.025,
-        freq_max=0.06,
+        freq_max=0.0625,
         pick_type='taup',
         taup_model=model,
         window_type='surface_wave',
         window_length=150.,
         capuaf_file=path_weights,
         )
-
 
     #
     # For our objective function, we will use a sum of body and surface wave
@@ -64,15 +60,15 @@ if __name__=='__main__':
 
     misfit_bw = Misfit(
         norm='L2',
-        time_shift_min=-2.,
-        time_shift_max=+2.,
+        time_shift_min=-4.,
+        time_shift_max=+4.,
         time_shift_groups=['ZR'],
         )
 
     misfit_sw = Misfit(
         norm='L2',
-        time_shift_min=-10.,
-        time_shift_max=+10.,
+        time_shift_min=-15.,
+        time_shift_max=+15.,
         time_shift_groups=['ZR','T'],
         )
 
@@ -96,9 +92,8 @@ if __name__=='__main__':
     wavelet = Trapezoid(
         magnitude=4.2)
 
-
     #
-    # Origin time and location will be fixed. For an example in which they 
+    # Origin time and location will be fixed. For an example in which they
     # vary, see examples/GridSearch.DoubleCouple+Magnitude+Depth.py
     #
     # See also Dataset.get_origins(), which attempts to create Origin objects
@@ -123,7 +118,7 @@ if __name__=='__main__':
 
     if comm.rank==0:
         print('Reading data...\n')
-        data = read(path_data, format='sac', 
+        data = read(path_data, format='sac',
             event_id=event_id,
             station_id_list=station_id_list,
             tags=['units:cm', 'type:velocity'])
@@ -179,7 +174,6 @@ if __name__=='__main__':
         data_sw, greens_sw, misfit_sw, origin, grid)
 
 
-
     if comm.rank==0:
 
         results = results_bw + results_sw
@@ -199,7 +193,7 @@ if __name__=='__main__':
         print('Generating figures...\n')
 
         plot_data_greens2(event_id+'FMT_waveforms.png',
-            data_bw, data_sw, greens_bw, greens_sw, process_bw, process_sw, 
+            data_bw, data_sw, greens_bw, greens_sw, process_bw, process_sw,
             misfit_bw, misfit_sw, stations, origin, best_source, lune_dict)
 
 
@@ -208,7 +202,8 @@ if __name__=='__main__':
 
 
         plot_misfit_lune(event_id+'FMT_misfit.png', results)
-
+        plot_misfit_lune(event_id+'FMT_misfit_mt.png', results, show_mt=True)
+        plot_misfit_lune(event_id+'FMT_misfit_tradeoff.png', results, show_tradeoffs=True)
 
         print('Saving results...\n')
 
@@ -225,4 +220,3 @@ if __name__=='__main__':
 
 
         print('\nFinished\n')
-
