@@ -72,7 +72,7 @@ Add these lines to event_input_mtuq2022.py for dowloading the supplementary mate
         ev_info.network = 'Z7'
         ev_info.channel = 'HH?'
         ev_info.station = '*'
-        ev_info.station = 'STAM,MOFO,EFJA,GODA,FJAS,OSKV,KLUR,DYFE,DJK,VIFE,LOKT,BJK,UTYR,BRU,LOGR,MIDF,FLAT,TOLI,KOLL,HVAF,KODA,SVIN,SKAF,K250,KALF,LAUF' 
+        ev_info.station = 'STAM,MOFO,EFJA,GODA,FJAS,OSKV,KLUR,DYFE,DJK,VIFE,LOKT,BJK,BRU,LOGR,MIDF,FLAT,KOLL,HVAF,KODA,SVIN,SKAF,K250,KALF,LAUF' 
         # ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
         
         # Event specific information CHANGE THIS vvvvvvvvvvvv
