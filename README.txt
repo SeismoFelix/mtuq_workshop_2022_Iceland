@@ -34,7 +34,7 @@ Add these lines to event_input_mtuq2022.py for dowloading the supplementary mate
         # Network and Channel requests CHANGE THIS vvvvvvvv
         ev_info.network = 'Z7'
         ev_info.channel = 'HH?'
-        ev_info.station = 'MOFO,DYFE,VADA,KLUR,RIFR,ASK,DREK,LOKT,VIFE,SVAD,BRU,HRUR,BOTN,BRUN,UTYR,MIDF,FLAT,SKAF,HETO,MYVO,TOLI,LAUF,HALI,KOLL,HELI,KODA,ARNA,FAG,SVIN,K250'
+        #ev_info.station = 'MOFO,DYFE,VADA,KLUR,RIFR,ASK,DREK,LOKT,VIFE,SVAD,BRU,HRUR,BOTN,BRUN,UTYR,MIDF,FLAT,SKAF,HETO,MYVO,TOLI,LAUF,HALI,KOLL,HELI,KODA,ARNA,FAG,SVIN,K250'
         ev_info.station = 'VADA,RIFR,DREK,VIFE,SVAD,BRU,BOTN,UTYR,MIDF,SKAF,HETO,LAUF,FAG,SVIN,K250'
        
         # ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -73,7 +73,6 @@ Add these lines to event_input_mtuq2022.py for dowloading the supplementary mate
         # Network and Channel requests CHANGE THIS vvvvvvvv
         ev_info.network = 'Z7'
         ev_info.channel = 'HH?'
-        ev_info.station = '*'
         #ev_info.station = 'STAM,MOFO,EFJA,GODA,FJAS,OSKV,KLUR,DYFE,DJK,VIFE,LOKT,BJK,BRU,LOGR,MIDF,FLAT,KOLL,HVAF,KODA,SVIN,SKAF,K250,KALF,LAUF' 
         ev_info.station = 'FJAS,OSKV,KLUR,DYFE,DJK,VIFE,LOKT,BJK,BRU,MIDF,KOLL,KODA,SVIN,SKAF,K250,KALF,LAUF'
         # ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
