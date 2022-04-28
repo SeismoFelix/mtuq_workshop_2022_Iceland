@@ -11,7 +11,7 @@ GridSearch.FullMomentTensor_SB.py: Full MT test SB event
 
 ********
 
-Add these lines to event_input_mtuq2022.py for dowloading the supplementary material data
+Add these lines (from the Hashtag)to event_input_mtuq2022.py for dowloading the supplementary material data
 
 # Iceland Event SA
     if iex == 5:
