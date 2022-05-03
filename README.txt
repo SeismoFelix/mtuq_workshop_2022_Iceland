@@ -1,4 +1,5 @@
-Supplementary material workshop MTUQ 2022: https://github.com/thurinj/mtuq_workshop_2022
+Supplementary material workshop MTUQ 2022 for Iceland
+
 EV4. 20140825161903000 :  Caldera Collapse  Mw. 4.3 event
 SA. 20140828081339000 : Caldera Collapse  Mw. 5.3 event
 SB. 20140826115645000 : Strike-slip Mw. 4.2 event triggered by dike propagation 
